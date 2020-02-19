@@ -1,23 +1,12 @@
 
-function capitalize(str) {
-    if (typeof str !== 'string') {
-        return 'Input must be a string';
+function computerPlay() {
+    var randomNum = Math.floor(Math.random() * 3) + 1;
+    console.log(randomNum);
+    if (randomNum === 1) {
+        return 'rock';
+    } else if (randomNum === 2) {
+        return 'paper';
+    } else {
+        return 'scissors';
     }
-    str = str.toLowerCase();
-    var firstLetter = str.slice(0, 1);
-    return firstLetter.toUpperCase() + str.slice(1);
 }
-
-function add7(num) {
-    return num + 7;
-}
-
-function multiply(num) {
-    return num * num;
-}
-
-function lastLetter(str) {
-    return str.split('').pop();
-}
-
-var hwllo = test;
