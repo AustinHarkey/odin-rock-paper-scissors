@@ -19,3 +19,5 @@ function multiply(num) {
 function lastLetter(str) {
     return str.split('').pop();
 }
+
+var hwllo = test;
