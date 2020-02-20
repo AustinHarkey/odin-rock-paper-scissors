@@ -69,13 +69,15 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    computerPlay();
-    playerPick();
-    playRound(playerSelection, computerSelection)
-
-    if(compScore === 5) {
-        return 'Computer Wins!!';
-    } else if (playScore === 5) {
-        return 'You win!!';
+    while(compScore <= 5 || playScore <= 5) {
+        computerPlay();
+        playerPick();
+        playRound(playerSelection, computerSelection)
+        
+        if(compScore === 5) {
+            return 'Computer Wins!!';
+        } else if (playScore === 5) {
+            return 'You win!!';
+        }
     }
 }
