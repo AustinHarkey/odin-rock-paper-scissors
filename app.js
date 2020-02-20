@@ -1,27 +1,27 @@
-var computerSelection;
-var playerSelection;
+// var computerSelection;  // you don't need these lame globals just pass the functions as args
+// var playerSelection;
 var compScore = 0;
 var playScore = 0;
 
 function computerPlay() {
     var randomNum = Math.floor(Math.random() * 3) + 1;
     if (randomNum === 1) {
-        computerSelection = 'rock';
+        return 'rock';
     } else if (randomNum === 2) {
-        computerSelection = 'paper';
+        return 'paper';
     } else {
-        computerSelection =  'scissors';
+        return  'scissors';
     }
 }
 
 function playerPick() {
     var randomNum = Math.floor(Math.random() * 3) + 1;
     if (randomNum === 1) {
-        playerSelection = 'rock';
+        return 'rock';
     } else if (randomNum === 2) {
-        playerSelection = 'paper';
+        return 'paper';
     } else {
-        playerSelection = 'scissors';
+        return 'scissors';
     }
 }
 
@@ -72,7 +72,7 @@ function game() {
     while(compScore <= 5 || playScore <= 5) {
         computerPlay();
         playerPick();
-        playRound(playerSelection, computerSelection)
+        playRound(playerPick(), computerPlay())
         
         if(compScore === 5) {
             return 'Computer Wins!!';
